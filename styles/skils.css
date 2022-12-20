@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* container div */
+main {
+    width: 350px;
+    height: auto;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #292629, #302d30);
+    box-shadow: 4px 4px 15px #252325,
+        -4px -4px 15px #353135;
+}
+
+/* navbar button */
+img#navbtn {
+    width: 2em;
+    margin: 20px;
+}
+
+input#checkbox {
+    float: left;
+    display: none;
+}
+
+/* navbar display */
+input#checkbox:checked~ul.links {
+    display: block;
+    animation-name: animatesidebar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+/*navbar container*/
+div.sidebar {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* nav links container */
+ul.links {
+    width: 100%;
+    height: auto;
+    display: none;
+    border: 3px solid black;
+    /* From https://css.glass */
+    background: #b3b0b04b;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animatesidebar {
+
+    From {
+        width: 35%;
+        /* transform: rotate(180deg); */
+    }
+
+
+
+    to {
+        width: 100%;
+        /* transform: rotate(360deg); */
+    }
+
+}
+
+/* navbar list */
+ul.links a li {
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    margin: 20px auto;
+    width: 40%;
+    color: #fff;
+}
+
+ul.links a li#active {
+    color: #daa520;
+}
+
+ul.links a li:hover {
+    color: #daa520;
+}
+
+/* skills container  */
+div.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+/* profile contianer */
+div.profile {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    margin: 0px auto 10px;
+    align-items: center;
+    background-color: #2b2d3002;
+}
+
+img#profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+ul.componenet {
+    width: 180px;
+    height: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul.componenet h3 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: #daa520;
+}
+
+ul.componenet p {
+    text-transform: capitalize;
+    font-size: 1em;
+    color: #fff;
+}
+
+/* skills conatiner */
+div.skills {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin: 0 auto 8px;
+    align-items: center;
+    background-color: #b3b0b0;
+    box-shadow: 0px 0px 0px rgb(179, 176, 176);
+}
+
+img.skills-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+ul.name-level {
+    width: 180px;
+    height: auto;
+    text-align: center;
+}
+
+ul.name-level h4 {
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #fff;
+}
+
+ul.name-level span.spec {
+    text-transform: capitalize;
+    font-size: 1em;
+    color: #fff;
+}
+
+/* things I can offer container */
+div.attribute {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div.attribute span {
+    padding: 8px 8px 4px;
+    margin: 5px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    background-color: #b3b0b0;
+
+}
+
+div.hide {
+    /* display: none; */
+}
+
+input {
+    /* display: none; */
+}
+
+p#seebtn {
+    color: #daa520;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-align: right;
+   margin: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input#checkbox:checked~div.hide {
+    display: block;
+}
+
+/* input range style effect */
+
+input[type=range] {
+    height: 24px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: #00000000;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 50px;
+    background: #daa520;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -4px;
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        width: 100%;
+    }
+}

@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/img/background.png);
+    background-size: cover;
+}
+
+/* container div */
+main {
+    width: 350px;
+    height: auto;
+    margin: 30px auto;
+    position: relative;
+}
+
+/* background cover image */
+img#cover {
+    width: 100%;
+    height: 60vh;
+    border-radius: 26px;
+    background: #696c65;
+    box-shadow: -7px 7px 14px #595c56,
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #daa520;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+/* image button */
+img#navbtn {
+    width: 2em;
+    margin: 20px;
+}
+
+input#checkbox {
+    float: left;
+    display: none;
+}
+
+/* navbar display */
+input#checkbox:checked~ul.links {
+    display: block;
+    animation-name: animatesidebar;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+/* name and track div */
+div.sidebar {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* navbar container */
+ul.links {
+    width: 100%;
+    height: auto;
+    display: none;
+    border: 3px solid black;
+    /* From https://css.glass */
+    background: #b3b0b04b;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+
+}
+
+@keyframes animatesidebar {
+
+    From {
+        width: 50%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+/* navbar list */
+ul.links a li {
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    margin: 10px auto;
+    width: 40%;
+    color: #fff;
+}
+
+ul.links a li#active {
+    color: #daa520;
+}
+
+ul.links a li:hover {
+    color: #daa520;
+}
+
+@media screen and (max-width: 895px) {
+    img#cover {
+        height: 77.4vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        width: 100%;
+    }
+}
